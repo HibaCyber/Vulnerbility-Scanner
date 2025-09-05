@@ -4,76 +4,40 @@ This is a Python-based vulnerability scanner that uses the National Vulnerabilit
 
 Features
 
-Detects CVEs in operating system and Python packages using the NVD API
+Detects CVEs in operating systems and Python packages using the NVD API
 
-Supports three usage modes:
+Works in three modes: console scanner, Google Colab, and Streamlit dashboard
 
-Console scanner (basic use in Spyder or terminal)
+Provides severity levels, CVSS scores, and links to official NVD entries
 
-Google Colab version (with CSV/JSON reporting)
+Exports results in CSV and JSON format
 
-Streamlit web dashboard (with filtering and export options)
-
-Provides severity ratings, CVSS scores, and direct links to NVD entries
-
-Exports results in CSV and JSON formats
-
-Useful for learning security automation and vulnerability management
+Helps in learning security automation and vulnerability management
 
 Installation
-Clone the repository
-git clone https://github.com/YourUsername/Vulnerability-Scanner.git
-cd Vulnerability-Scanner
 
-Install dependencies
-pip install -r requirements.txt
-
-
-Or manually:
-
-pip install streamlit pyngrok requests pandas
+To use this project, clone the repository and install the required Python packages such as Streamlit, Pyngrok, Requests, and Pandas.
 
 Usage
-1. Console Scanner (Spyder or Terminal)
 
-Run the script to scan for vulnerabilities:
+You can use this project in three ways:
 
-python scanner.py
+Console Scanner – Run the scanner script directly from Spyder or your terminal.
 
-2. Google Colab Notebook
+Google Colab – Upload and run the Colab notebook to generate vulnerability reports in CSV or JSON.
 
-Upload the notebook scanner_colab.ipynb to Google Colab and run it.
-
-Generates CSV and JSON reports
-
-Easy to use without local setup
-
-3. Streamlit Web Application
-
-Run the dashboard locally:
-
-streamlit run app.py
-
-
-If running in Google Colab, use Ngrok to create a tunnel:
-
-from pyngrok import ngrok
-ngrok.set_auth_token("YOUR_TOKEN")
-public_url = ngrok.connect(8501)
-print("App URL:", public_url)
+Streamlit Dashboard – Start the web application for an interactive view of detected vulnerabilities with filtering and export options. If using Colab, Ngrok can be used to make the app publicly accessible.
 
 Example Output
 
-Severity levels: Low, Medium, High, Critical
-
-Report includes: Software name, version, CVE ID, CVSS score, description, and NVD link
+The scanner shows software name, version, CVE ID, severity, CVSS score, description, and a link to the NVD page. Results can also be exported for reporting.
 
 Use Cases
 
-Security auditing
+Security auditing and assessments
 
-Risk management
+Risk management and patch planning
 
-Learning security automation and vulnerability scanning
+Learning automation in cybersecurity
 
-Generating vulnerability reports for patching and remediation
+Generating reports for vulnerability remediation
